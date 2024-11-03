@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Run FindSteamGamePath",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}/.build/bin/FindSteamGamePath.exe",
+      "args": ["613830"],
+      "cwd": "${workspaceRoot}/.build/bin/"
+    }
+  ]
+}
