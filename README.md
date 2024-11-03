@@ -12,3 +12,18 @@ Download the latest release then run it passing as first argument the Steam AppI
 $ FindSteamGamePath 39140
 C:\Program Files (x86)\Steam\steamapps\common\FINAL FANTASY VII
 ```
+
+## How to integrate in CMakeLists.txt
+
+Download the latest release, unpack it next to your `CMakeLists.txt` and add this code:
+
+```cmake
+execute_process(
+  COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/FindSteamGamePath 39140
+  OUTPUT_VARIABLE GAME_PATH
+  OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+if(NOT "${GAME_PATH}" STREQUAL "")
+  message("Game path found: ${GAME_PATH}")
+endif()
+```
