@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
                                 return 1;
                             }
                             auto manifestRoot = tyti::vdf::read(manifestStream);
-                            installPath = libraryPath + "/steamapps/common/" + manifestRoot.attribs["name"];
+                            installPath = libraryPath + "/steamapps/common/" + manifestRoot.attribs["installdir"];
                             break;
                         }
                     }
